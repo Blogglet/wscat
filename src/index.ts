@@ -5,7 +5,7 @@ import * as WebSocket from 'ws';
 
 
 
-class Wscat extends Command {
+class Wsncat extends Command {
   static description = 'describe the command here'
 
   static flags = {
@@ -44,7 +44,7 @@ class Wscat extends Command {
 
 
   async run() {
-    const {args, flags} = this.parse(Wscat);
+    const {args, flags} = this.parse(Wsncat);
     cli.action.start(`Connecting to ${args.url} `);
     this.connection = new WebSocket(args.url);
     this.connection.onopen  = () => {cli.action.stop("✔️"); this.comunication();}
@@ -55,4 +55,4 @@ class Wscat extends Command {
   }
 }
 
-export = Wscat
+export = Wsncat

@@ -1,16 +1,17 @@
 {
-  "name": "wscat",
+  "name": "wsncat",
   "description": "A simple tool to connect to websocket ",
   "version": "0.0.0",
   "author": "Alberto Ruiz @Az107",
   "bin": "./bin/run",
-  "bugs": "https://github.com/Az107/wscat/issues",
+  "bugs": "https://github.com/Az107/wsncat/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
     "@types/ws": "^8.2.0",
     "cli-ux": "^5.6.3",
+    "makensis": "^1.1.1",
     "oclif": "^1.18.1",
     "tslib": "^1",
     "ws": "^8.2.3"
@@ -21,6 +22,7 @@
     "eslint": "^5.13",
     "eslint-config-oclif": "^3.1",
     "eslint-config-oclif-typescript": "^0.1",
+    "pkg": "^5.4.1",
     "rimraf": "^3.0.2",
     "ts-node": "^8",
     "typescript": "^3.3"
@@ -32,16 +34,16 @@
     "/bin",
     "/lib"
   ],
-  "homepage": "https://github.com/Az107/wscat",
+  "homepage": "https://github.com/Az107/wsncat",
   "keywords": [
     "oclif"
   ],
   "license": "MIT",
   "main": "lib/index.js",
   "oclif": {
-    "bin": "wscat"
+    "bin": "wsncat"
   },
-  "repository": "Az107/wscat",
+  "repository": "Az107/wsncat",
   "scripts": {
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rimraf lib && tsc -b && oclif-dev readme",
